@@ -1,0 +1,37 @@
+Multiple Conditions
+
+Employees
+| Column Name | Type    |
+| ----------- | ------- |
+| employee_id | int     |
+| name        | varchar |
+| department  | varchar |
+| salary      | int     |
+
+
+employee_id is the primary key.
+
+Write a query to return the employee_id, name, department, and salary of employees who:
+
+work in the IT department
+and have a salary greater than 55000
+
+Return the result in any order.
+
+Example
+
+Input:
+
+| employee_id | name  | department | salary |
+| ----------: | ----- | ---------- | -----: |
+|           1 | Alice | IT         |  65000 |
+|           2 | Bob   | HR         |  60000 |
+|           3 | Carol | IT         |  52000 |
+|           4 | David | IT         |  58000 |
+
+Output:
+
+| employee_id | name  | department | salary |
+| ----------: | ----- | ---------- | -----: |
+|           1 | Alice | IT         |  65000 |
+|           4 | David | IT         |  58000 |
