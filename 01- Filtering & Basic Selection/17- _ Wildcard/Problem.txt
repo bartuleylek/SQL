@@ -1,0 +1,35 @@
+_ Wildcard
+
+Employees
+| Column Name | Type    |
+| ----------- | ------- |
+| employee_id | int     |
+| name        | varchar |
+| department  | varchar |
+| salary      | int     |
+
+Write a query to return the employee_id and name of employees whose names:
+
+start with the letter A,
+and contain exactly four characters.
+
+Use the LIKE operator with the _ wildcard.
+
+Example
+
+Input:
+
+| employee_id | name  | department | salary |
+| ----------: | ----- | ---------- | -----: |
+|           1 | Alex  | IT         |  65000 |
+|           2 | Alice | HR         |  50000 |
+|           3 | Adam  | Finance    |  72000 |
+|           4 | Amy   | Sales      |  58000 |
+|           5 | Bob   | IT         |  60000 |
+
+Output:
+
+| employee_id | name |
+| ----------: | ---- |
+|           1 | Alex |
+|           3 | Adam |

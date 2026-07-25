@@ -1,0 +1,33 @@
+OR and NULL
+
+Employees
+| Column Name | Type    |
+| ----------- | ------- |
+| employee_id | int     |
+| name        | varchar |
+| department  | varchar |
+| manager_id  | int     |
+
+Write a query to return the employee_id, name, and department of employees who:
+
+work in the Finance department,
+or do not have a manager.
+
+Return the result in any order.
+
+Example
+| employee_id | name  | department | manager_id |
+| ----------: | ----- | ---------- | ---------: |
+|           1 | Alice | IT         |       NULL |
+|           2 | Bob   | Finance    |          5 |
+|           3 | Carol | HR         |          8 |
+|           4 | David | Finance    |       NULL |
+
+
+Output
+
+| employee_id | name  | department |
+| ----------: | ----- | ---------- |
+|           1 | Alice | IT         |
+|           2 | Bob   | Finance    |
+|           4 | David | Finance    |

@@ -1,0 +1,16 @@
+Combined Condition with NULL
+
+Employees
+| Column Name | Type    |
+| ----------- | ------- |
+| employee_id | int     |
+| name        | varchar |
+| department  | varchar |
+| manager_id  | int     |
+
+Write a query to return the employee_id, name, and department of employees who:
+
+work in the IT department,
+and do not have a manager.
+
+Return the result in any order.

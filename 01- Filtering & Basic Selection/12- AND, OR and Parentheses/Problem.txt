@@ -1,0 +1,35 @@
+AND, OR and Parentheses
+
+Employees
+| Column Name | Type    |
+| ----------- | ------- |
+| employee_id | int     |
+| name        | varchar |
+| department  | varchar |
+| salary      | int     |
+
+Write a query to return the employee_id, name, department, and salary of employees who:
+
+work in the IT department and have a salary greater than 60000,
+or work in the Finance department and have a salary greater than 70000.
+
+Use parentheses to clearly separate the two condition groups.
+
+Example
+
+Input:
+
+| employee_id | name  | department | salary |
+| ----------: | ----- | ---------- | -----: |
+|           1 | Alice | IT         |  65000 |
+|           2 | Bob   | IT         |  55000 |
+|           3 | Carol | Finance    |  75000 |
+|           4 | David | Finance    |  68000 |
+|           5 | Emma  | HR         |  90000 |
+
+Output:
+
+| employee_id | name  | department | salary |
+| ----------: | ----- | ---------- | -----: |
+|           1 | Alice | IT         |  65000 |
+|           3 | Carol | Finance    |  75000 |

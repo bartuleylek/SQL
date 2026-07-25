@@ -1,0 +1,18 @@
+Priority and Parentheses
+
+Employees
+| Column Name | Type    |
+| ----------- | ------- |
+| employee_id | int     |
+| name        | varchar |
+| department  | varchar |
+| salary      | int     |
+| manager_id  | int     |
+
+Return the employee_id, name, department, and salary of employees who:
+
+work in either IT or Finance,
+have a salary between 60000 and 90000, inclusive,
+and either have no manager or have a name starting with A.
+
+Use parentheses to make the condition groups clear.
