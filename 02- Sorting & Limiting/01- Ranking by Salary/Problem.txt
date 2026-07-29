@@ -1,0 +1,17 @@
+Ranking by Salary
+
+Employees
+| Column Name | Type    |
+| ----------- | ------- |
+| employee_id | int     |
+| name        | varchar |
+| salary      | int     |
+
+Write a query to return the employee_id, name, and salary of all employees, sorted by salary from highest to lowest.
+
+Example output
+| employee_id | name  | salary |
+| ----------: | ----- | -----: |
+|           3 | Carol |  90000 |
+|           1 | Alice |  70000 |
+|           2 | Bob   |  50000 |

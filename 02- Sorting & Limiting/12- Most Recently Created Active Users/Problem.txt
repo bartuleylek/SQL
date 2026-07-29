@@ -1,0 +1,18 @@
+Most Recently Created Active Users
+
+Users
+
+| Column Name | Type     |
+| ----------- | -------- |
+| user_id     | int      |
+| username    | varchar  |
+| country     | varchar  |
+| status      | varchar  |
+| created_at  | datetime |
+
+Write a query to return the 'user_id', 'username', and 'created_at' of the five most recently created active users from Turkey.
+
+Sort the result:
+
+1. By 'created_at' from newest to oldest.
+2. If multiple users have the same 'created_at' value, by 'user_id' from highest to lowest.

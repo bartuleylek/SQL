@@ -1,0 +1,18 @@
+Highest-Rated Drama Movies
+
+Movies
+
+| Column Name  | Type    |
+| ------------ | ------- |
+| movie_id     | int     |
+| title        | varchar |
+| genre        | varchar |
+| rating       | decimal |
+| release_year | int     |
+
+Write a query to return the 'movie_id', 'title', and 'rating' of the three highest-rated Drama movies released in 2020 or later.
+
+Sort the result:
+
+1. By 'rating' from highest to lowest.
+2. If multiple movies have the same rating, by 'release_year' from newest to oldest.

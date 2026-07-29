@@ -1,0 +1,24 @@
+Order By More Than One Column
+
+Employees
+| Column Name | Type    |
+| ----------- | ------- |
+| employee_id | int     |
+| name        | varchar |
+| department  | varchar |
+| salary      | int     |
+
+Write a query to return all employees:
+
+sorted alphabetically by department,
+employees in the same department sorted by salary from highest to lowest.
+
+Return employee_id, name, department, and salary.
+
+Example
+| employee_id | name  | department | salary |
+| ----------: | ----- | ---------- | -----: |
+|           3 | Carol | Finance    |  80000 |
+|           2 | Bob   | Finance    |  60000 |
+|           1 | Alice | IT         |  75000 |
+|           4 | David | IT         |  50000 |

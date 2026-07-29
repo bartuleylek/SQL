@@ -1,0 +1,24 @@
+Filtering and Three-Level Sorting
+
+Products
+
+| Column Name  | Type    |
+| ------------ | ------- |
+| product_id   | int     |
+| product_name | varchar |
+| category     | varchar |
+| price        | decimal |
+| rating       | decimal |
+| stock        | int     |
+
+Write a query to return the 'product_id', 'product_name', 'price', and 'rating' of the five highest-rated products that:
+
+- belong to either the Electronics or Computers category,
+- have a stock quantity greater than 0,
+- and cost no more than 2000.
+
+Sort the result:
+
+1. By 'rating' from highest to lowest.
+2. If ratings are equal, by 'price' from lowest to highest.
+3. If both rating and price are equal, by 'product_name' alphabetically from A to Z.

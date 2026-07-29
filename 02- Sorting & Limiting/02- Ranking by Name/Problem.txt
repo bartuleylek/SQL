@@ -1,0 +1,12 @@
+Ranking by Name
+
+Employees
+| Column Name | Type    |
+| ----------- | ------- |
+| employee_id | int     |
+| name        | varchar |
+| salary      | int     |
+
+Write a query to return the employee_id, name, and salary of all employees, sorted alphabetically by name from A to Z.
+
+Return all employees.

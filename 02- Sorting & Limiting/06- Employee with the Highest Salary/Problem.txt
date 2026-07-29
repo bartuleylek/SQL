@@ -1,0 +1,3 @@
+Employee with the Highest Salary
+
+Write a query to return the 'employee_id', 'name', and 'salary' of the employee with the highest salary.

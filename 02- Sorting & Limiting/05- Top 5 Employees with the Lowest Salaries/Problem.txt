@@ -1,0 +1,5 @@
+Top 5 Employees with the Lowest Salaries
+
+Write a query to return the employee_id, name, and salary of the five employees with the lowest salaries.
+
+Sort the result from lowest salary to highest salary.

@@ -1,0 +1,18 @@
+Cheapest Products in Stock
+
+Products
+
+| Column Name  | Type    |
+| ------------ | ------- |
+| product_id   | int     |
+| product_name | varchar |
+| category     | varchar |
+| price        | decimal |
+| stock        | int     |
+
+Write a query to return the 'product_id', 'product_name', and 'price' of the four cheapest products that:
+
+- belong to the Electronics category,
+- and have a stock quantity greater than 0.
+
+Sort the result by price from lowest to highest.

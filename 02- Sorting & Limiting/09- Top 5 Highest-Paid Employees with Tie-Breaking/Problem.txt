@@ -1,0 +1,16 @@
+Top 5 Highest-Paid Employees with Tie-Breaking
+
+Employees
+
+| Column Name | Type    |
+| ----------- | ------- |
+| employee_id | int     |
+| name        | varchar |
+| salary      | int     |
+
+Write a query to return the 'employee_id', 'name', and 'salary' of the five highest-paid employees.
+
+Sort the result:
+
+1. By salary from highest to lowest.
+2. If multiple employees have the same salary, by name alphabetically from A to Z.

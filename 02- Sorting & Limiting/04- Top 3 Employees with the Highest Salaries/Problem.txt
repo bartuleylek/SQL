@@ -1,0 +1,5 @@
+Top 3 Employees with the Highest Salaries
+
+Write a query to return the employee_id, name, and salary of the three employees with the highest salaries.
+
+Sort the result from highest salary to lowest salary.

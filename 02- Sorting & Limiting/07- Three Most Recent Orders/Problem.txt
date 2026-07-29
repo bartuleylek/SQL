@@ -1,0 +1,14 @@
+Three Most Recent Orders
+
+Orders
+
+| Column Name   | Type    |
+| ------------- | ------- |
+| order_id      | int     |
+| customer_name | varchar |
+| order_date    | date    |
+| total_amount  | decimal |
+
+Write a query to return the 'order_id', 'customer_name', and 'order_date' of the three most recent orders.
+
+Sort the result from newest to oldest.

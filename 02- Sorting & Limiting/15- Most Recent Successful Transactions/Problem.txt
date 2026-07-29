@@ -1,0 +1,18 @@
+Most Recent Successful Transactions
+
+Transactions
+
+| Column Name      | Type     |
+| ---------------- | -------- |
+| transaction_id   | int      |
+| customer_id      | int      |
+| amount           | decimal  |
+| status           | varchar  |
+| transaction_date | datetime |
+
+Write a query to return the 'transaction_id', 'customer_id', 'amount', and 'transaction_date' of the ten most recent successful transactions with an amount of at least 1000.
+
+Sort the result:
+
+1. By 'transaction_date' from newest to oldest.
+2. If multiple transactions have the same 'transaction_date', by 'amount' from highest to lowest.

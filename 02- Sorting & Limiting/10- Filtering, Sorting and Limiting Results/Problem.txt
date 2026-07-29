@@ -1,0 +1,14 @@
+Filtering, Sorting, and Limiting Results
+
+Employees
+
+| Column Name | Type    |
+| ----------- | ------- |
+| employee_id | int     |
+| name        | varchar |
+| department  | varchar |
+| salary      | int     |
+
+Write a query to return the 'employee_id', 'name', and 'salary' of the three highest-paid employees in the IT department.
+
+Sort the result by salary from highest to lowest.
