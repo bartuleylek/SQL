@@ -1,2 +1,2 @@
 # SQL
-This repository contains my personal solutions and explanations for SQL problems.
+This repository contains my solutions and explanations for SQL problems.
