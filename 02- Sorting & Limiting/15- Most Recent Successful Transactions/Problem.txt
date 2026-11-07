@@ -1,18 +1,41 @@
 Most Recent Successful Transactions
 
-Transactions
+Table: Transactions
+Column Name	Type	Constraints
+transaction_id	int	PRIMARY KEY
+customer_id	int	NOT NULL
+amount	decimal	NOT NULL
+status	varchar	NOT NULL
+transaction_date	datetime	NOT NULL  
 
-| Column Name      | Type     |
-| ---------------- | -------- |
-| transaction_id   | int      |
-| customer_id      | int      |
-| amount           | decimal  |
-| status           | varchar  |
-| transaction_date | datetime |
+transaction_id is the primary key for this table.
+Each row represents one transaction.
 
-Write a query to return the 'transaction_id', 'customer_id', 'amount', and 'transaction_date' of the ten most recent successful transactions with an amount of at least 1000.
+Problem
+Write the SQL query to return the ten most recent successful transactions with an amount of at least 1000.
 
+Return the following columns:
+- transaction_id
+- customer_id
+- amount
+- transaction_date
 Sort the result:
+- by transaction_date from newest to oldest,
+- and if multiple transactions have the same transaction_date, by amount from highest to lowest.
 
-1. By 'transaction_date' from newest to oldest.
-2. If multiple transactions have the same 'transaction_date', by 'amount' from highest to lowest.
+Example
+Input: Transactions
+transaction_id	customer_id	amount	status	transaction_date
+1	101	1500	successful	2026-01-10 10:00:00
+2	102	900	successful	2026-01-11 09:00:00
+3	103	2000	failed	2026-01-12 12:00:00
+4	104	1800	successful	2026-01-13 15:30:00
+5	105	1200	successful	2026-01-13 15:30:00
+6	106	2500	successful	2026-01-14 08:00:00  
+
+Output
+transaction_id	customer_id	amount	transaction_date
+6	106	2500	2026-01-14 08:00:00
+4	104	1800	2026-01-13 15:30:00
+5	105	1200	2026-01-13 15:30:00
+1	101	1500	2026-01-10 10:00:00

@@ -1,0 +1,36 @@
+WHERE + GROUP BY + Multiple HAVING Conditions
+
+Table: Employees
+Column Name	Type	Constraints
+employee_id	int	PRIMARY KEY
+department	varchar	NOT NULL
+salary	int	NOT NULL  
+
+employee_id is the primary key for this table.
+Each row represents one employee.
+
+Problem
+Considering only employees who earn more than 50000, write the SQL query to return departments that:
+- have at least 3 such employees,
+- and have an average salary greater than 60000 among those employees.
+Return the following columns:
+- department
+- employee_count
+- average_salary
+Return the result in any order.
+
+Example
+Input: Employees
+employee_id	department	salary
+1	IT	70000
+2	IT	65000
+3	IT	80000
+4	HR	55000
+5	HR	58000
+6	HR	62000
+7	Finance	75000
+8	Finance	68000  
+
+Output
+department	employee_count	average_salary
+IT	3	71666.67

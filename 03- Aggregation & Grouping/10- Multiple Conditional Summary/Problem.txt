@@ -1,0 +1,34 @@
+Multiple Conditional Summary
+
+Table: Orders
+Column Name	Type	Constraints
+order_id	int	PRIMARY KEY
+customer_id	int	NOT NULL
+status	varchar	NOT NULL
+amount	decimal	NOT NULL  
+
+order_id is the primary key for this table.
+Each row represents one order.
+
+Problem
+Write the SQL query to return summary statistics for completed orders whose amount is at least 100.
+
+Return the following columns:
+- completed_order_count
+- completed_total_amount
+- completed_average_amount
+- completed_highest_amount
+Return all values in a single row.
+
+Example
+Input: Orders
+order_id	customer_id	status	amount
+101	1	completed	250
+102	2	completed	80
+103	1	completed	150
+104	3	cancelled	700
+105	2	completed	300  
+
+Output
+completed_order_count	completed_total_amount	completed_average_amount	completed_highest_amount
+3	700	233.33	300

@@ -1,0 +1,53 @@
+INNER JOIN + WHERE
+
+Table: Customers
+Column Name	Type	Constraints
+customer_id	int	PRIMARY KEY
+customer_name	varchar	NOT NULL
+city	varchar	NOT NULL
+
+
+customer_id is the primary key for this table.
+Each row represents one customer.
+
+Table: Orders
+Column Name	Type	Constraints
+order_id	int	PRIMARY KEY
+customer_id	int	NOT NULL, FOREIGN KEY
+status	varchar	NOT NULL
+amount	decimal	NOT NULL
+
+
+order_id is the primary key for this table.
+customer_id is a foreign key referencing Customers.customer_id.
+Each row represents one order placed by a customer.
+
+Problem
+Write the SQL query to return all completed orders together with the name of the customer who placed each order.
+
+Return the following columns:
+- order_id
+- customer_name
+- amount
+Return the result in any order.
+
+Example
+Input: Customers
+customer_id	customer_name	city
+1	Alice	London
+2	Bob	Paris
+3	Carol	Berlin
+
+
+Input: Orders
+order_id	customer_id	status	amount
+101	1	completed	250
+102	2	pending	400
+103	1	completed	150
+104	3	cancelled	700
+
+
+Output
+order_id	customer_name	amount
+101	Alice	250
+103	Alice	150

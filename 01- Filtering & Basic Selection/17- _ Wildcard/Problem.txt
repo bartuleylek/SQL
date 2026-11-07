@@ -1,35 +1,36 @@
 _ Wildcard
 
-Employees
-| Column Name | Type    |
-| ----------- | ------- |
-| employee_id | int     |
-| name        | varchar |
-| department  | varchar |
-| salary      | int     |
+Table: Employees
+Column Name	Type	Constraints
+employee_id	int	PRIMARY KEY
+name	varchar	NOT NULL
+department	varchar	NOT NULL
+salary	int	NOT NULL
 
-Write a query to return the employee_id and name of employees whose names:
+employee_id is the primary key for this table.
+Each row represents one employee.
 
-start with the letter A,
-and contain exactly four characters.
-
+Problem
+Write the SQL query to return employees whose names:
+- start with the letter A,
+- and contain exactly four characters.
 Use the LIKE operator with the _ wildcard.
 
+Return the following columns:
+- employee_id
+- name
+Return the result in any order.
+
 Example
+Input: Employees
+employee_id	name	department	salary
+1	Alex	IT	65000
+2	Alice	HR	50000
+3	Adam	Finance	72000
+4	Amy	Sales	58000
+5	Bob	IT	60000
 
-Input:
-
-| employee_id | name  | department | salary |
-| ----------: | ----- | ---------- | -----: |
-|           1 | Alex  | IT         |  65000 |
-|           2 | Alice | HR         |  50000 |
-|           3 | Adam  | Finance    |  72000 |
-|           4 | Amy   | Sales      |  58000 |
-|           5 | Bob   | IT         |  60000 |
-
-Output:
-
-| employee_id | name |
-| ----------: | ---- |
-|           1 | Alex |
-|           3 | Adam |
+Output
+employee_id	name
+1	Alex
+3	Adam

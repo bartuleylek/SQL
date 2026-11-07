@@ -1,0 +1,36 @@
+WHERE + GROUP BY + HAVING
+
+Table: Orders
+Column Name	Type	Constraints
+order_id	int	PRIMARY KEY
+customer_id	int	NOT NULL
+status	varchar	NOT NULL
+amount	decimal	NOT NULL  
+
+order_id is the primary key for this table.
+Each row represents one order.
+
+Problem
+Write the SQL query to return customers who have at least 3 completed orders, considering only orders whose amount is greater than 100.
+
+Return the following columns:
+- customer_id
+- order_count
+- total_amount
+Return the result in any order.
+
+Example
+Input: Orders
+order_id	customer_id	status	amount
+101	1	completed	250
+102	1	completed	150
+103	1	completed	300
+104	1	pending	500
+105	2	completed	200
+106	2	completed	180
+107	3	completed	90
+108	3	completed	400  
+
+Output
+customer_id	order_count	total_amount
+1	3	700

@@ -1,0 +1,39 @@
+Multiple HAVING Conditions
+
+Table: Orders
+Column Name	Type	Constraints
+order_id	int	PRIMARY KEY
+customer_id	int	NOT NULL
+status	varchar	NOT NULL
+amount	decimal	NOT NULL  
+
+order_id is the primary key for this table.
+Each row represents one order.
+
+Problem
+Write the SQL query to return customers who:
+- have at least 4 completed orders,
+- and have a total completed order amount greater than 1000.
+Return the following columns:
+- customer_id
+- order_count
+- total_amount
+Return the result in any order.
+
+Example
+Input: Orders
+order_id	customer_id	status	amount
+101	1	completed	300
+102	1	completed	250
+103	1	completed	400
+104	1	completed	200
+105	2	completed	150
+106	2	completed	200
+107	2	completed	250
+108	2	completed	300
+109	3	completed	500
+110	3	pending	700  
+
+Output
+customer_id	order_count	total_amount
+1	4	1150

@@ -1,18 +1,43 @@
 Most Recently Created Active Users
 
-Users
+Table: Users
+Column Name	Type	Constraints
+user_id	int	PRIMARY KEY
+username	varchar	NOT NULL
+country	varchar	NOT NULL
+status	varchar	NOT NULL
+created_at	datetime	NOT NULL  
 
-| Column Name | Type     |
-| ----------- | -------- |
-| user_id     | int      |
-| username    | varchar  |
-| country     | varchar  |
-| status      | varchar  |
-| created_at  | datetime |
+user_id is the primary key for this table.
+Each row represents one user.
 
-Write a query to return the 'user_id', 'username', and 'created_at' of the five most recently created active users from Turkey.
+Problem
+Write the SQL query to return the five most recently created active users from Turkey.
 
+Return the following columns:
+- user_id
+- username
+- created_at
 Sort the result:
+- by created_at from newest to oldest,
+- and if multiple users have the same created_at value, by user_id from highest to lowest.
 
-1. By 'created_at' from newest to oldest.
-2. If multiple users have the same 'created_at' value, by 'user_id' from highest to lowest.
+Example
+Input: Users
+user_id	username	country	status	created_at
+1	alice	Turkey	active	2026-01-10 09:30:00
+2	bob	Turkey	inactive	2026-01-12 10:00:00
+3	carol	Germany	active	2026-01-15 11:00:00
+4	david	Turkey	active	2026-01-20 14:00:00
+5	emma	Turkey	active	2026-01-20 14:00:00
+6	frank	Turkey	active	2026-01-18 08:00:00
+7	grace	Turkey	active	2026-01-16 16:30:00
+8	henry	Turkey	active	2026-01-14 12:00:00  
+
+Output
+user_id	username	created_at
+5	emma	2026-01-20 14:00:00
+4	david	2026-01-20 14:00:00
+6	frank	2026-01-18 08:00:00
+7	grace	2026-01-16 16:30:00
+8	henry	2026-01-14 12:00:00

@@ -1,0 +1,76 @@
+Mixed JOIN Challenge
+
+Table: Customers
+Column Name	Type	Constraints
+customer_id	int	PRIMARY KEY
+customer_name	varchar	NOT NULL
+city	varchar	NOT NULL
+
+customer_id is the primary key for this table.
+Each row represents one customer.
+
+Table: Orders
+Column Name	Type	Constraints
+order_id	int	PRIMARY KEY
+customer_id	int	NOT NULL, FOREIGN KEY
+product_id	int	NOT NULL, FOREIGN KEY
+status	varchar	NOT NULL
+amount	decimal	NOT NULL
+
+order_id is the primary key for this table.
+customer_id is a foreign key referencing Customers.customer_id.
+product_id is a foreign key referencing Products.product_id.
+Each row represents one order.
+
+Table: Products
+Column Name	Type	Constraints
+product_id	int	PRIMARY KEY
+product_name	varchar	NOT NULL
+category	varchar	NOT NULL
+
+product_id is the primary key for this table.
+Each row represents one product.
+
+Problem
+Write the SQL query to return customers who have placed at least 2 completed orders for products in the Electronics category.
+
+For each customer, return the number of qualifying orders and the total amount of those orders.
+
+Return the following columns:
+- customer_id
+- customer_name
+- order_count
+- total_amount
+Return the result ordered by total_amount in descending order.
+
+Example
+Input: Customers
+customer_id	customer_name	city
+1	Alice	London
+2	Bob	Paris
+3	Carol	Berlin
+4	David	Rome
+
+Input: Products
+product_id	product_name	category
+10	Laptop	Electronics
+20	Phone	Electronics
+30	Desk	Furniture
+40	Tablet	Electronics
+
+Input: Orders
+order_id	customer_id	product_id	status	amount
+101	1	10	completed	1200
+102	1	20	completed	800
+103	1	30	completed	400
+104	2	10	completed	1200
+105	2	40	pending	600
+106	3	20	completed	800
+107	3	40	completed	600
+108	3	30	completed	400
+109	4	10	cancelled	1200
+
+Output
+customer_id	customer_name	order_count	total_amount
+1	Alice	2	2000
+3	Carol	2	1400

@@ -1,0 +1,30 @@
+Conditional Count
+
+Table: Orders
+Column Name	Type	Constraints
+order_id	int	PRIMARY KEY
+customer_id	int	NOT NULL
+status	varchar	NOT NULL
+amount	decimal	NOT NULL  
+
+order_id is the primary key for this table.
+Each row represents one order.
+
+Problem
+Write the SQL query to return the number of cancelled orders whose amount is greater than 500.
+
+Return the following column:
+- cancelled_order_count
+
+Example
+Input: Orders
+order_id	customer_id	status	amount
+101	1	cancelled	750
+102	2	completed	900
+103	3	cancelled	400
+104	4	cancelled	1200
+105	5	pending	600  
+
+Output
+cancelled_order_count
+2

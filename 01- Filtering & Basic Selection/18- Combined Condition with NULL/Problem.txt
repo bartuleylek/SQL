@@ -1,16 +1,38 @@
 Combined Condition with NULL
 
-Employees
-| Column Name | Type    |
-| ----------- | ------- |
-| employee_id | int     |
-| name        | varchar |
-| department  | varchar |
-| manager_id  | int     |
+Table: Employees
+Column Name	Type	Constraints
+employee_id	int	PRIMARY KEY
+name	varchar	NOT NULL
+department	varchar	NOT NULL
+manager_id	int	NULL, FOREIGN KEY
 
-Write a query to return the employee_id, name, and department of employees who:
+employee_id is the primary key for this table.
+manager_id is a foreign key referencing Employees.employee_id.
+manager_id can be NULL if the employee does not have a manager.
+Each row represents one employee.
 
-work in the IT department,
-and do not have a manager.
+Problem
+Write the SQL query to return employees who:
+- work in the IT department,
+- and do not have a manager.
 
+Return the following columns:
+- employee_id
+- name
+- department
 Return the result in any order.
+
+Example
+Input: Employees
+employee_id	name	department	manager_id
+1	Alice	IT	NULL
+2	Bob	IT	1
+3	Carol	Finance	NULL
+4	David	IT	NULL
+5	Emma	HR	2
+
+Output
+employee_id	name	department
+1	Alice	IT
+4	David	IT

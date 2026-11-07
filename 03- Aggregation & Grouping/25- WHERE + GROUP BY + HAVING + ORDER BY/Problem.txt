@@ -1,0 +1,41 @@
+WHERE + GROUP BY + HAVING + ORDER BY
+
+Table: Sales
+Column Name	Type	Constraints
+sale_id	int	PRIMARY KEY
+salesperson_id	int	NOT NULL
+status	varchar	NOT NULL
+amount	decimal	NOT NULL  
+
+sale_id is the primary key for this table.
+Each row represents one sale.
+
+Problem
+Write the SQL query to return salespeople who:
+- have at least 5 completed sales,
+- have a total completed sales amount greater than 5000,
+- considering only completed sales whose amount is at least 200.
+Return the following columns:
+- salesperson_id
+- sale_count
+- total_sales
+Sort the result by total_sales from highest to lowest.
+
+Example
+Input: Sales
+sale_id	salesperson_id	status	amount
+1	101	completed	1200
+2	101	completed	900
+3	101	completed	1500
+4	101	completed	1100
+5	101	completed	800
+6	102	completed	1000
+7	102	completed	900
+8	102	completed	800
+9	102	completed	700
+10	103	completed	150
+11	103	completed	2000  
+
+Output
+salesperson_id	sale_count	total_sales
+101	5	5500

@@ -1,0 +1,32 @@
+NULL and Aggregate
+
+Table: Employees
+Column Name	Type	Constraints
+employee_id	int	PRIMARY KEY
+name	varchar	NOT NULL
+department	varchar	NOT NULL
+bonus	decimal	NULL  
+
+employee_id is the primary key for this table.
+bonus can be NULL if an employee does not have a bonus.
+Each row represents one employee.
+
+Problem
+Write the SQL query to return:
+- the total number of employees as employee_count,
+- the number of employees who have a non-null bonus as bonus_employee_count,
+- the average of the non-null bonus values as average_bonus.
+Return all values in a single row.
+
+Example
+Input: Employees
+employee_id	name	department	bonus
+1	Alice	IT	5000
+2	Bob	HR	NULL
+3	Carol	Finance	3000
+4	David	IT	NULL
+5	Emma	Sales	2000  
+
+Output
+employee_count	bonus_employee_count	average_bonus
+5	3	3333.33

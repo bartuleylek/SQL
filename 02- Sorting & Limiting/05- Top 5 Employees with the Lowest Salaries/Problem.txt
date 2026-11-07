@@ -1,5 +1,38 @@
 Top 5 Employees with the Lowest Salaries
 
-Write a query to return the employee_id, name, and salary of the five employees with the lowest salaries.
+Table: Employees
+Column Name	Type	Constraints
+employee_id	int	PRIMARY KEY
+name	varchar	NOT NULL
+salary	int	NOT NULL  
 
-Sort the result from lowest salary to highest salary.
+employee_id is the primary key for this table.
+Each row represents one employee.
+
+Problem
+Write the SQL query to return the five employees with the lowest salaries.
+
+Return the following columns:
+- employee_id
+- name
+- salary
+Sort the result by salary from lowest to highest.
+
+Example
+Input: Employees
+employee_id	name	salary
+1	Alice	70000
+2	Bob	50000
+3	Carol	90000
+4	David	45000
+5	Emma	60000
+6	Frank	55000
+7	Grace	80000  
+
+Output
+employee_id	name	salary
+4	David	45000
+2	Bob	50000
+6	Frank	55000
+5	Emma	60000
+1	Alice	70000

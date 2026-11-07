@@ -1,18 +1,40 @@
 Highest-Rated Drama Movies
 
-Movies
+Table: Movies
+Column Name	Type	Constraints
+movie_id	int	PRIMARY KEY
+title	varchar	NOT NULL
+genre	varchar	NOT NULL
+rating	decimal	NOT NULL
+release_year	int	NOT NULL  
 
-| Column Name  | Type    |
-| ------------ | ------- |
-| movie_id     | int     |
-| title        | varchar |
-| genre        | varchar |
-| rating       | decimal |
-| release_year | int     |
+movie_id is the primary key for this table.
+Each row represents one movie.
 
-Write a query to return the 'movie_id', 'title', and 'rating' of the three highest-rated Drama movies released in 2020 or later.
+Problem
+Write the SQL query to return the three highest-rated Drama movies released in 2020 or later.
+
+Return the following columns:
+- movie_id
+- title
+- rating
 
 Sort the result:
+- by rating from highest to lowest,
+- and if multiple movies have the same rating, by release_year from newest to oldest.
 
-1. By 'rating' from highest to lowest.
-2. If multiple movies have the same rating, by 'release_year' from newest to oldest.
+Example
+Input: Movies
+movie_id	title	genre	rating	release_year
+1	Film A	Drama	8.7	2021
+2	Film B	Comedy	9.0	2022
+3	Film C	Drama	9.1	2023
+4	Film D	Drama	8.9	2020
+5	Film E	Drama	9.1	2022
+6	Film F	Drama	8.5	2019  
+
+Output
+movie_id	title	rating
+3	Film C	9.1
+5	Film E	9.1
+4	Film D	8.9

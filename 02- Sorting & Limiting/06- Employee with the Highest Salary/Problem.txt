@@ -1,3 +1,30 @@
 Employee with the Highest Salary
 
-Write a query to return the 'employee_id', 'name', and 'salary' of the employee with the highest salary.
+Table: Employees
+Column Name	Type	Constraints
+employee_id	int	PRIMARY KEY
+name	varchar	NOT NULL
+salary	int	NOT NULL  
+
+employee_id is the primary key for this table.
+Each row represents one employee.
+
+Problem
+Write the SQL query to return the employee with the highest salary.
+
+Return the following columns:
+- employee_id
+- name
+- salary
+
+Example
+Input: Employees
+employee_id	name	salary
+1	Alice	70000
+2	Bob	50000
+3	Carol	90000
+4	David	80000  
+
+Output
+employee_id	name	salary
+3	Carol	90000

@@ -1,18 +1,43 @@
 Priority and Parentheses
 
-Employees
-| Column Name | Type    |
-| ----------- | ------- |
-| employee_id | int     |
-| name        | varchar |
-| department  | varchar |
-| salary      | int     |
-| manager_id  | int     |
+Table: Employees
+Column Name	Type	Constraints
+employee_id	int	PRIMARY KEY
+name	varchar	NOT NULL
+department	varchar	NOT NULL
+salary	int	NOT NULL
+manager_id	int	NULL, FOREIGN KEY  
 
-Return the employee_id, name, department, and salary of employees who:
+employee_id is the primary key for this table.
+manager_id is a foreign key referencing Employees.employee_id.
+manager_id can be NULL if the employee does not have a manager.
+Each row represents one employee.
 
-work in either IT or Finance,
-have a salary between 60000 and 90000, inclusive,
-and either have no manager or have a name starting with A.
-
+Problem
+Write the SQL query to return employees who:
+- work in either the IT or Finance department,
+- have a salary between 60000 and 90000, inclusive,
+- and either do not have a manager or have a name starting with the letter A.
 Use parentheses to make the condition groups clear.
+
+Return the following columns:
+- employee_id
+- name
+- department
+- salary
+Return the result in any order.
+
+Example
+Input: Employees
+employee_id	name	department	salary	manager_id
+1	Alice	IT	65000	2
+2	Bob	Finance	75000	NULL
+3	Carol	IT	55000	NULL
+4	David	Finance	82000	2
+5	Adam	HR	70000	NULL
+6	Emma	IT	88000	2  
+
+Output
+employee_id	name	department	salary
+1	Alice	IT	65000
+2	Bob	Finance	75000

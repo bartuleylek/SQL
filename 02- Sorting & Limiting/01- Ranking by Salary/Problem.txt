@@ -1,17 +1,32 @@
 Ranking by Salary
 
-Employees
-| Column Name | Type    |
-| ----------- | ------- |
-| employee_id | int     |
-| name        | varchar |
-| salary      | int     |
+Table: Employees
+Column Name	Type	Constraints
+employee_id	int	PRIMARY KEY
+name	varchar	NOT NULL
+salary	int	NOT NULL  
 
-Write a query to return the employee_id, name, and salary of all employees, sorted by salary from highest to lowest.
+employee_id is the primary key for this table.
+Each row represents one employee.
 
-Example output
-| employee_id | name  | salary |
-| ----------: | ----- | -----: |
-|           3 | Carol |  90000 |
-|           1 | Alice |  70000 |
-|           2 | Bob   |  50000 |
+Problem
+Write the SQL query to return all employees sorted by salary from highest to lowest.
+
+Return the following columns:
+- employee_id
+- name
+- salary
+Sort the result by salary in descending order.
+
+Example
+Input: Employees
+employee_id	name	salary
+1	Alice	70000
+2	Bob	50000
+3	Carol	90000  
+
+Output
+employee_id	name	salary
+3	Carol	90000
+1	Alice	70000
+2	Bob	50000

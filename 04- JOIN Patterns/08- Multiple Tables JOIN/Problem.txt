@@ -1,0 +1,67 @@
+Multiple Tables JOIN
+
+Table: Customers
+Column Name	Type	Constraints
+customer_id	int	PRIMARY KEY
+customer_name	varchar	NOT NULL
+
+customer_id is the primary key for this table.
+Each row represents one customer.
+
+Table: Orders
+Column Name	Type	Constraints
+order_id	int	PRIMARY KEY
+customer_id	int	NOT NULL, FOREIGN KEY
+product_id	int	NOT NULL, FOREIGN KEY
+amount	decimal	NOT NULL
+
+order_id is the primary key for this table.
+customer_id is a foreign key referencing Customers.customer_id.
+product_id is a foreign key referencing Products.product_id.
+Each row represents one order.
+
+Table: Products
+Column Name	Type	Constraints
+product_id	int	PRIMARY KEY
+product_name	varchar	NOT NULL
+category	varchar	NOT NULL
+
+product_id is the primary key for this table.
+Each row represents one product.
+
+Problem
+Write the SQL query to return every order together with the customer name and product name.
+
+Return the following columns:
+- order_id
+- customer_name
+- product_name
+- amount
+Return the result in any order.
+
+Example
+Input: Customers
+customer_id	customer_name
+1	Alice
+2	Bob
+3	Carol
+
+Input: Products
+product_id	product_name	category
+10	Laptop	Electronics
+20	Phone	Electronics
+30	Desk	Furniture
+
+Input: Orders
+order_id	customer_id	product_id	amount
+101	1	10	1200
+102	2	20	800
+103	1	30	400
+104	3	10	1200
+
+Output
+order_id	customer_name	product_name	amount
+101	Alice	Laptop	1200
+102	Bob	Phone	800
+103	Alice	Desk	400
+104	Carol	Laptop	1200

@@ -1,0 +1,30 @@
+Distinct Customers
+
+Table: Orders
+Column Name	Type	Constraints
+order_id	int	PRIMARY KEY
+customer_id	int	NOT NULL
+status	varchar	NOT NULL
+amount	decimal	NOT NULL  
+
+order_id is the primary key for this table.
+Each row represents one order.
+
+Problem
+Write the SQL query to return the number of distinct customers who have at least one completed order.
+
+Return the following column:
+- completed_customer_count
+
+Example
+Input: Orders
+order_id	customer_id	status	amount
+101	1	completed	250
+102	2	pending	400
+103	1	completed	150
+104	3	completed	700
+105	3	completed	300  
+
+Output
+completed_customer_count
+2

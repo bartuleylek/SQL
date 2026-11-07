@@ -1,0 +1,30 @@
+Conditional Sum
+
+Table: Orders
+Column Name	Type	Constraints
+order_id	int	PRIMARY KEY
+customer_id	int	NOT NULL
+status	varchar	NOT NULL
+amount	decimal	NOT NULL  
+
+order_id is the primary key for this table.
+Each row represents one order.
+
+Problem
+Write the SQL query to return the total amount of completed orders.
+
+Return the following column:
+- completed_total_amount
+
+Example
+Input: Orders
+order_id	customer_id	status	amount
+101	1	completed	250
+102	2	pending	400
+103	1	completed	150
+104	3	cancelled	700
+105	2	completed	300  
+
+Output
+completed_total_amount
+700

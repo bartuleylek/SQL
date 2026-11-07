@@ -1,0 +1,37 @@
+Filtering and Aggregation
+
+Table: Transactions
+Column Name	Type	Constraints
+transaction_id	int	PRIMARY KEY
+customer_id	int	NOT NULL
+transaction_type	varchar	NOT NULL
+amount	decimal	NOT NULL
+status	varchar	NOT NULL  
+
+transaction_id is the primary key for this table.
+Each row represents one transaction.
+
+Problem
+Write the SQL query to return summary statistics for successful deposit transactions whose amount is greater than 500.
+
+Return the following columns:
+- transaction_count
+- customer_count
+- total_deposit
+- lowest_deposit
+- highest_deposit
+Return all values in a single row.
+
+Example
+Input: Transactions
+transaction_id	customer_id	transaction_type	amount	status
+1	101	deposit	800	successful
+2	102	deposit	400	successful
+3	101	deposit	1200	successful
+4	103	withdrawal	900	successful
+5	104	deposit	700	failed
+6	105	deposit	600	successful  
+
+Output
+transaction_count	customer_count	total_deposit	lowest_deposit	highest_deposit
+3	2	2600	600	1200

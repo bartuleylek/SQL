@@ -1,0 +1,34 @@
+HAVING
+
+Table: Employees
+Column Name	Type	Constraints
+employee_id	int	PRIMARY KEY
+name	varchar	NOT NULL
+department	varchar	NOT NULL
+salary	int	NOT NULL  
+
+employee_id is the primary key for this table.
+Each row represents one employee.
+
+Problem
+Write the SQL query to return only departments that have at least 5 employees.
+
+Return the following columns:
+- department
+- employee_count
+Return the result in any order.
+
+Example
+Input: Employees
+employee_id	name	department	salary
+1	Alice	IT	70000
+2	Bob	IT	65000
+3	Carol	IT	80000
+4	David	IT	60000
+5	Emma	IT	75000
+6	Frank	HR	50000
+7	Grace	HR	55000  
+
+Output
+department	employee_count
+IT	5

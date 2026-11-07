@@ -1,24 +1,48 @@
 Filtering and Three-Level Sorting
 
-Products
+Table: Products
+Column Name	Type	Constraints
+product_id	int	PRIMARY KEY
+product_name	varchar	NOT NULL
+category	varchar	NOT NULL
+price	decimal	NOT NULL
+rating	decimal	NOT NULL
+stock	int	NOT NULL  
 
-| Column Name  | Type    |
-| ------------ | ------- |
-| product_id   | int     |
-| product_name | varchar |
-| category     | varchar |
-| price        | decimal |
-| rating       | decimal |
-| stock        | int     |
+product_id is the primary key for this table.
+Each row represents one product.
 
-Write a query to return the 'product_id', 'product_name', 'price', and 'rating' of the five highest-rated products that:
-
+Problem
+Write the SQL query to return the five highest-rated products that:
 - belong to either the Electronics or Computers category,
 - have a stock quantity greater than 0,
 - and cost no more than 2000.
 
+Return the following columns:
+- product_id
+- product_name
+- price
+- rating
 Sort the result:
+- by rating from highest to lowest,
+- if ratings are equal, by price from lowest to highest,
+- and if both rating and price are equal, by product_name alphabetically from A to Z.
 
-1. By 'rating' from highest to lowest.
-2. If ratings are equal, by 'price' from lowest to highest.
-3. If both rating and price are equal, by 'product_name' alphabetically from A to Z.
+Example
+Input: Products
+product_id	product_name	category	price	rating	stock
+1	Laptop Pro	Computers	1800	4.9	5
+2	Phone X	Electronics	1200	4.8	10
+3	Monitor Plus	Electronics	500	4.9	4
+4	Gaming PC	Computers	2200	5.0	3
+5	Tablet Air	Electronics	700	4.7	0
+6	Keyboard Max	Computers	150	4.8	8
+7	Camera Pro	Electronics	1200	4.8	6  
+
+Output
+product_id	product_name	price	rating
+3	Monitor Plus	500	4.9
+1	Laptop Pro	1800	4.9
+6	Keyboard Max	150	4.8
+7	Camera Pro	1200	4.8
+2	Phone X	1200	4.8

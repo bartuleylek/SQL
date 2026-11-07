@@ -1,37 +1,37 @@
 BETWEEN Operator
 
-You are given the following table:
+Table: Employees
+Column Name	Type	Constraints
+employee_id	int	PRIMARY KEY
+name	varchar	NOT NULL
+department	varchar	NOT NULL
+salary	int	NOT NULL
 
-Employees
-| Column Name | Type    |
-| ----------- | ------- |
-| employee_id | int     |
-| name        | varchar |
-| department  | varchar |
-| salary      | int     |
+employee_id is the primary key for this table.
+Each row represents one employee.
 
-Write a query to return the employee_id, name, and salary of employees whose salary is between 50000 and 70000, inclusive.
+Problem
+Write the SQL query to return employees whose salary is between 50000 and 70000, inclusive.
 
 Use the BETWEEN operator.
 
+Return the following columns:
+- employee_id
+- name
+- salary
 Return the result in any order.
 
 Example
+Input: Employees
+employee_id	name	department	salary
+1	Alice	IT	50000
+2	Bob	HR	45000
+3	Carol	Finance	70000
+4	David	Sales	72000
+5	Emma	IT	60000
 
-Input:
-
-| employee_id | name  | department | salary |
-| ----------: | ----- | ---------- | -----: |
-|           1 | Alice | IT         |  50000 |
-|           2 | Bob   | HR         |  45000 |
-|           3 | Carol | Finance    |  70000 |
-|           4 | David | Sales      |  72000 |
-|           5 | Emma  | IT         |  60000 |
-
-Output:
-
-| employee_id | name  | salary |
-| ----------: | ----- | -----: |
-|           1 | Alice |  50000 |
-|           3 | Carol |  70000 |
-|           5 | Emma  |  60000 |
+Output
+employee_id	name	salary
+1	Alice	50000
+3	Carol	70000
+5	Emma	60000

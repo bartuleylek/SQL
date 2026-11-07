@@ -1,0 +1,47 @@
+LEFT JOIN - Find Unmatched Records
+
+Table: Customers
+Column Name	Type	Constraints
+customer_id	int	PRIMARY KEY
+customer_name	varchar	NOT NULL
+city	varchar	NOT NULL
+
+customer_id is the primary key for this table.
+Each row represents one customer.
+
+Table: Orders
+Column Name	Type	Constraints
+order_id	int	PRIMARY KEY
+customer_id	int	NOT NULL, FOREIGN KEY
+amount	decimal	NOT NULL
+
+order_id is the primary key for this table.
+customer_id is a foreign key referencing Customers.customer_id.
+Each row represents one order placed by a customer.
+
+Problem
+Write the SQL query to return customers who have never placed an order.
+
+Return the following columns:
+- customer_id
+- customer_name
+Return the result in any order.
+
+Example
+Input: Customers
+customer_id	customer_name	city
+1	Alice	London
+2	Bob	Paris
+3	Carol	Berlin
+4	David	Rome
+
+Input: Orders
+order_id	customer_id	amount
+101	1	250
+102	2	400
+103	1	150
+104	3	700
+
+Output
+customer_id	customer_name
+4	David

@@ -1,0 +1,54 @@
+One-to-Many JOIN Behavior
+
+Table: Customers
+Column Name	Type	Constraints
+customer_id	int	PRIMARY KEY
+customer_name	varchar	NOT NULL
+
+customer_id is the primary key for this table.
+Each row represents one customer.
+
+Table: Orders
+Column Name	Type	Constraints
+order_id	int	PRIMARY KEY
+customer_id	int	NOT NULL, FOREIGN KEY
+amount	decimal	NOT NULL
+
+order_id is the primary key for this table.
+customer_id is a foreign key referencing Customers.customer_id.
+Each row represents one order placed by a customer.
+A customer can place multiple orders.
+
+Problem
+Write the SQL query to return every order together with the name of the customer who placed it.
+
+A customer may appear multiple times in the result if they have placed multiple orders.
+
+Return the following columns:
+- customer_name
+- order_id
+- amount
+Return the result in any order.
+
+Example
+Input: Customers
+customer_id	customer_name
+1	Alice
+2	Bob
+3	Carol
+
+Input: Orders
+order_id	customer_id	amount
+101	1	250
+102	2	400
+103	1	150
+104	3	700
+105	1	300
+
+Output
+customer_name	order_id	amount
+Alice	101	250
+Alice	103	150
+Alice	105	300
+Bob	102	400
+Carol	104	700

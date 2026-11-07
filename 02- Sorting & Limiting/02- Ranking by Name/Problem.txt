@@ -1,12 +1,32 @@
 Ranking by Name
 
-Employees
-| Column Name | Type    |
-| ----------- | ------- |
-| employee_id | int     |
-| name        | varchar |
-| salary      | int     |
+Table: Employees
+Column Name	Type	Constraints
+employee_id	int	PRIMARY KEY
+name	varchar	NOT NULL
+salary	int	NOT NULL  
 
-Write a query to return the employee_id, name, and salary of all employees, sorted alphabetically by name from A to Z.
+employee_id is the primary key for this table.
+Each row represents one employee.
 
-Return all employees.
+Problem
+Write the SQL query to return all employees sorted alphabetically by name from A to Z.
+
+Return the following columns:
+- employee_id
+- name
+- salary
+Sort the result by name in ascending order.
+
+Example
+Input: Employees
+employee_id	name	salary
+1	Carol	90000
+2	Alice	70000
+3	Bob	50000  
+
+Output
+employee_id	name	salary
+2	Alice	70000
+3	Bob	50000
+1	Carol	90000

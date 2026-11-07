@@ -1,18 +1,40 @@
 Cheapest Products in Stock
 
-Products
+Table: Products
+Column Name	Type	Constraints
+product_id	int	PRIMARY KEY
+product_name	varchar	NOT NULL
+category	varchar	NOT NULL
+price	decimal	NOT NULL
+stock	int	NOT NULL  
 
-| Column Name  | Type    |
-| ------------ | ------- |
-| product_id   | int     |
-| product_name | varchar |
-| category     | varchar |
-| price        | decimal |
-| stock        | int     |
+product_id is the primary key for this table.
+Each row represents one product.
 
-Write a query to return the 'product_id', 'product_name', and 'price' of the four cheapest products that:
-
+Problem
+Write the SQL query to return the four cheapest products that:
 - belong to the Electronics category,
 - and have a stock quantity greater than 0.
-
+Return the following columns:
+- product_id
+- product_name
+- price
 Sort the result by price from lowest to highest.
+
+Example
+Input: Products
+product_id	product_name	category	price	stock
+1	Laptop	Electronics	1200	5
+2	Phone	Electronics	800	10
+3	Headphones	Electronics	150	0
+4	Tablet	Electronics	600	7
+5	Monitor	Electronics	300	4
+6	Desk	Furniture	250	6
+7	Keyboard	Electronics	100	8  
+
+Output
+product_id	product_name	price
+7	Keyboard	100
+5	Monitor	300
+4	Tablet	600
+2	Phone	800

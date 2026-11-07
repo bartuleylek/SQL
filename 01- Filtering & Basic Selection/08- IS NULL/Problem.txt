@@ -1,31 +1,36 @@
 IS NULL
 
-Employees
-| Column Name | Type    |
-| ----------- | ------- |
-| employee_id | int     |
-| name        | varchar |
-| manager_id  | int     |
-| salary      | int     |
+Table: Employees
+Column Name	Type	Constraints
+employee_id	int	PRIMARY KEY
+name	varchar	NOT NULL
+manager_id	int	NULL, FOREIGN KEY
+salary	int	NOT NULL
 
-Write a query to return the employee_id and name of employees who do not have a manager.
+employee_id is the primary key for this table.
+manager_id is a foreign key referencing Employees.employee_id.
+manager_id can be NULL if the employee does not have a manager.
+Each row represents one employee.
+
+Problem
+Write the SQL query to return employees who do not have a manager.
 
 Use IS NULL.
 
+Return the following columns:
+- employee_id
+- name
+Return the result in any order.
+
 Example
+Input: Employees
+employee_id	name	manager_id	salary
+1	Alice	NULL	90000
+2	Bob	1	60000
+3	Carol	1	65000
+4	David	NULL	85000
 
-Input:
-
-| employee_id | name  | manager_id | salary |
-| ----------: | ----- | ---------: | -----: |
-|           1 | Alice |       NULL |  90000 |
-|           2 | Bob   |          1 |  60000 |
-|           3 | Carol |          1 |  65000 |
-|           4 | David |       NULL |  85000 |
-
-Output:
-
-| employee_id | name  |
-| ----------: | ----- |
-|           1 | Alice |
-|           4 | David |
+Output
+employee_id	name
+1	Alice
+4	David

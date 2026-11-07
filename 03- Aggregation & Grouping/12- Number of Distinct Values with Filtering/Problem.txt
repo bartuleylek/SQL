@@ -1,0 +1,31 @@
+Number of Distinct Values with Filtering
+
+Table: Employees
+Column Name	Type	Constraints
+employee_id	int	PRIMARY KEY
+name	varchar	NOT NULL
+department	varchar	NOT NULL
+city	varchar	NOT NULL
+salary	int	NOT NULL  
+
+employee_id is the primary key for this table.
+Each row represents one employee.
+
+Problem
+Write the SQL query to return the number of distinct cities in which employees earning at least 50000.
+
+Return the following column:
+- city_count
+
+Example
+Input: Employees
+employee_id	name	department	city	salary
+1	Alice	IT	Istanbul	70000
+2	Bob	HR	Ankara	45000
+3	Carol	Finance	Istanbul	80000
+4	David	IT	Izmir	60000
+5	Emma	Sales	Izmir	55000  
+
+Output
+city_count
+2
