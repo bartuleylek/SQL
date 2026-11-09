@@ -1,0 +1,36 @@
+Subquery with Aggregate Comparison
+
+Table: Products
+Column Name	Type	Constraints
+product_id	int	PRIMARY KEY
+product_name	varchar	NOT NULL
+category	varchar	NOT NULL
+price	decimal	NOT NULL  
+
+product_id is the primary key for this table.
+Each row represents one product.
+
+Problem
+Write the SQL query to return products whose price is greater than the average price of all products in the same category.
+
+Return the following columns:
+- product_id
+- product_name
+- category
+- price
+Return the result in any order.
+
+Example
+Input: Products
+product_id	product_name	category	price
+1	Laptop	Electronics	1200
+2	Phone	Electronics	800
+3	Tablet	Electronics	1000
+4	Desk	Furniture	500
+5	Chair	Furniture	300
+6	Sofa	Furniture	700  
+
+Output
+product_id	product_name	category	price
+1	Laptop	Electronics	1200
+6	Sofa	Furniture	700

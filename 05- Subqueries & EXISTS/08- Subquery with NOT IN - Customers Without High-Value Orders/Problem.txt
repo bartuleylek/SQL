@@ -1,0 +1,50 @@
+Subquery with NOT IN - Customers Without High-Value Orders
+
+Table: Customers
+Column Name	Type	Constraints
+customer_id	int	PRIMARY KEY
+customer_name	varchar	NOT NULL  
+
+customer_id is the primary key for this table.
+Each row represents one customer.
+
+Table: Orders
+Column Name	Type	Constraints
+order_id	int	PRIMARY KEY
+customer_id	int	NOT NULL, FOREIGN KEY
+amount	decimal	NOT NULL  
+
+order_id is the primary key for this table.
+customer_id is a foreign key referencing Customers.customer_id.
+Each row represents one order placed by a customer.
+
+Problem
+Write the SQL query to return customers who have never placed an order with an amount greater than 500.
+
+Use a subquery with the NOT IN operator.
+
+Return the following columns:
+- customer_id
+- customer_name
+Return the result in any order.
+
+Example
+Input: Customers
+customer_id	customer_name
+1	Alice
+2	Bob
+3	Carol
+4	David  
+
+Input: Orders
+order_id	customer_id	amount
+101	1	250
+102	2	800
+103	1	700
+104	3	400
+105	3	300  
+
+Output
+customer_id	customer_name
+3	Carol
+4	David
